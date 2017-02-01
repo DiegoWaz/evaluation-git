@@ -22,4 +22,5 @@ return array(
     'PhpCsFixerExtra\\' => array($vendorDir . '/pierophp/php-cs-fixer-extra/src'),
     'Doctrine\\Instantiator\\' => array($vendorDir . '/doctrine/instantiator/src/Doctrine/Instantiator'),
     'DeepCopy\\' => array($vendorDir . '/myclabs/deep-copy/src/DeepCopy'),
+    '' => array($baseDir . '/src'),
 );

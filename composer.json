@@ -6,7 +6,9 @@
         "pierophp/php-cs-fixer-extra": "^0.0.4"
     },
     "autoload": {
-        "psr-4": {"" : "src/" }
+        "psr-4": {
+            "" : "src/"
+        }
     },
     "authors": [
         {
