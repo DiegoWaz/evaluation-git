@@ -48,5 +48,4 @@ class StringFormatterTest extends \PHPUnit_Framework_TestCase
         $result = $myString->suffix("test", "unitaire", true);
         $this->assertEquals("unitaireTest", $result);
     }  
-
 }
