@@ -14,58 +14,39 @@ class StringFormatterTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals("parisiens", $result);
     }
 
-    public function testtoCamelCase()
+    public function testtotestCase()
     {
         $myCamelCase = new StringFormatter();
         $result = $myCamelCase->concatString(strtolower("Sublim"), ucfirst("test"));
         $this->assertEquals("sublimTest", $result);
     }
 
-    public function testPrefix() {
+    public function testPrefixTrue(){
 
         $myString = new StringFormatter();
-        $result = $myString->concatString("test", "unitaire", true);
+        $result = $myString->prefix("test", "unitaire", true);
+        $this->assertEquals("testUnitaire", $result);
+    }
+
+    public function testPrefixFalse(){
+
+        $myString = new StringFormatter();
+        $result = $myString->prefix("test", "unitaire", false);
         $this->assertEquals("testunitaire", $result);
     }
 
-    public function testSuffix() {
-
+    public function testSuffixFalse()
+    {
         $myString = new StringFormatter();
-        $result = $myString->concatString("test", "unitaire", true);
-        $this->assertEquals("testunitaire", $result);
+        $result = $myString->suffix("test", "unitaire", false);
+        $this->assertEquals("unitairetest", $result);
     }
 
-
-
-    // /**
-    //  * @param string $suffix
-    //  * @param string $string
-    //  * @param bool $camelCase
-    //  * @return string
-    //  */
-    // public function suffix($suffix, $string, $camelCase = false)
-    // {
-    //     if($camelCase)
-    //     {
-    //         return $this->toCamelCase($string, $suffix);
-    //     }
-    //     return $this->concatString($string, $suffix);
-    // }
-
-    // /**
-    //  * @param string $firstString
-    //  * @param string $secondString
-    //  * @return string
-    //  */
-    // public function toCamelCase($firstString, $secondString)
-    // {
-    //     return $this->concatString(strtolower($firstString), ucfirst($secondString));
-    // }
-
-    /**
-     * @param string $firstString
-     * @param string $secondString
-     * @return string
-     */
+    public function testSuffixTrue()
+    {
+        $myString = new StringFormatter();
+        $result = $myString->suffix("test", "unitaire", true);
+        $this->assertEquals("unitaireTest", $result);
+    }  
 
 }
