@@ -1,0 +1,17 @@
+{
+    "name": "diegowaziri/eval-git",
+    "description": "evaluation git",
+    "require": {
+        "phpunit/phpunit": "^5.7",
+        "pierophp/php-cs-fixer-extra": "^0.0.4"
+    },
+    "autoload": {
+        "psr-4": {"" : "src/" }
+    },
+    "authors": [
+        {
+            "name": "Diego",
+            "email": "waziri.diego@gmail.com"
+        }
+    ]
+}
